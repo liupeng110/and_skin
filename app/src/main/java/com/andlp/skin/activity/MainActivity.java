@@ -14,11 +14,15 @@ public class MainActivity extends SkinBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        map.put("时尚细黑", "SSXHZT.ttf");
+//        map.put("大梁体", "DLTZT.ttf");
+//        map.put("微软雅黑", "WRYHZT.ttf");
 
         Button btn_neght =(Button)findViewById(R.id.btn_neght);
         btn_neght.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 SkinManager.getInstance().NightMode();//夜间
+//                SkinManager.getInstance().loadFont("DLTZT.ttf");
             }
         });
 
@@ -26,8 +30,11 @@ public class MainActivity extends SkinBaseActivity {
         btn_default.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 SkinManager.getInstance().restoreDefaultTheme();//恢复默认
+                SkinManager.getInstance().loadFont(null);
             }
         });
+
+
 
 
 

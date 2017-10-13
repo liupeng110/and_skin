@@ -1,5 +1,9 @@
 package com.andlp.skin;
 
+import android.app.Activity;
+import android.app.Application;
+import android.os.Bundle;
+
 import com.andlp.skin.util.CrashUtil;
 
 import solid.ren.skinlibrary.SkinConfig;
@@ -15,10 +19,31 @@ public class App extends SkinBaseApplication {
         super.onCreate();
         CrashUtil.getInstance().init(this);
         SkinConfig.setCanChangeStatusColor(true);
-        SkinConfig.setCanChangeFont(true);
-        SkinConfig.setDebug(true);
+//        SkinConfig.setCanChangeFont(true);
+//        SkinConfig.setDebug(true);
 //        SkinConfig.addSupportAttr("tabLayoutIndicator", new TabLayoutIndicatorAttr());
         SkinConfig.enableGlobalSkinApply();
 
+        this.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+//                if (SkinConfig.isDefaultSkin(activity)){
+//                    activity.setTheme(R.style.AppTheme2);
+//                }else {
+//                    activity.setTheme(R.style.AppTheme);
+//                }
+//                SkinConfig.isInNightMode(activity);
+
+
+            }
+            @Override public void onActivityStarted(Activity activity) {  }
+            @Override  public void onActivityResumed(Activity activity) {  }
+            @Override public void onActivityPaused(Activity activity) { }
+            @Override public void onActivityStopped(Activity activity) { }
+            @Override public void onActivitySaveInstanceState(Activity activity, Bundle outState) { }
+            @Override  public void onActivityDestroyed(Activity activity) {  }
+        });
     }
+
+
+
 }
