@@ -2,7 +2,10 @@ package com.andlp.skin;
 
 import android.app.Activity;
 import android.app.Application;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 
 import com.andlp.skin.util.CrashUtil;
 
@@ -18,7 +21,7 @@ public class App extends SkinBaseApplication {
     public void onCreate() {
         super.onCreate();
         CrashUtil.getInstance().init(this);
-        SkinConfig.setCanChangeStatusColor(true);
+//        SkinConfig.setCanChangeStatusColor(true);
 //        SkinConfig.setCanChangeFont(true);
 //        SkinConfig.setDebug(true);
 //        SkinConfig.addSupportAttr("tabLayoutIndicator", new TabLayoutIndicatorAttr());
@@ -26,6 +29,9 @@ public class App extends SkinBaseApplication {
 
         this.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){  //5.0以上
+                    activity.getWindow().setStatusBarColor(Color.parseColor("#00000000"));
+                }
 //                if (SkinConfig.isDefaultSkin(activity)){
 //                    activity.setTheme(R.style.AppTheme2);
 //                }else {

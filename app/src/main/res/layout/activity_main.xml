@@ -6,9 +6,10 @@
     xmlns:skin="http://schemas.android.com/android/skin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background"
     tools:context="com.andlp.skin.activity.MainActivity"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     skin:enable="true"
     >
 
