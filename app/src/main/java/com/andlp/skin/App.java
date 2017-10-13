@@ -1,6 +1,5 @@
 package com.andlp.skin;
 
-import com.andlp.skin.skin.Attr_Toolbar;
 import com.andlp.skin.util.CrashUtil;
 
 import solid.ren.skinlibrary.SkinConfig;
@@ -18,10 +17,7 @@ public class App extends SkinBaseApplication {
         SkinConfig.setCanChangeStatusColor(true);
         SkinConfig.setCanChangeFont(true);
         SkinConfig.setDebug(true);
-        SkinConfig.addSupportAttr("titleTextColor", new Attr_Toolbar());//toolbar的字体颜色换色
-
 //        SkinConfig.addSupportAttr("tabLayoutIndicator", new TabLayoutIndicatorAttr());
-//        SkinConfig.addSupportAttr("button", new RadioButtonAttr());//支持换肤的属性
         SkinConfig.enableGlobalSkinApply();
 
     }

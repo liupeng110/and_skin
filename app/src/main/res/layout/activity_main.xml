@@ -12,17 +12,6 @@
     skin:enable="true"
     >
 
-    <!--<android.support.v7.widget.Toolbar-->
-        <!--android:id="@+id/toolbar"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:background="@color/colorPrimaryDark"-->
-        <!--android:title="@string/app_name"-->
-        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
-        <!--app:titleTextColor="@color/textcolor"-->
-        <!--skin:enable="true"-->
-        <!--/>-->
-
     <Button
         android:id="@+id/btn_neght"
         android:layout_width="wrap_content"
